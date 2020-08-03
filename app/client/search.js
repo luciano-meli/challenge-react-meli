@@ -1,6 +1,11 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const Search = require('../shared/components/pages/search')
+const React = require('react');
+const ReactDOM = require('react-dom');
+const Search = require('../shared/components/pages/search');
+require('../shared/components/pages/search.scss');
 
-ReactDOM.hydrate(<Search />, document.getElementById('root')); // renderizar nuestro componenente en nuestra vista
+const preloadedState = window.ML_PRELOADED_STATE;
 
+ReactDOM.hydrate(
+  <Search {...preloadedState} />,
+  document.getElementById('root'),
+); // renderizar nuestro componenente en nuestra vista

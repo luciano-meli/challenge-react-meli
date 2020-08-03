@@ -1,8 +1,6 @@
-const React = require('react')
+const React = require('react');
+const Layout = require('../commons/layout');
 
-const Home = () =>
- <div>
-     Home Meli
- </div>;
+const Home = () => <Layout />;
 
 module.exports = Home;

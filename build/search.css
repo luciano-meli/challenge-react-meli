@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("/static/proxima-nova-300.woff2");
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("/static/proxima-nova-400.woff2");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("/static/proxima-nova-600.woff2");
+  font-weight: 600; }
+
+body {
+  margin: 0;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  background-color: #f5f5f5;
+  -webkit-font-smoothing: antialiased; }
+  body a {
+    color: #333;
+    text-decoration: none; }
+
+.layout-wrapper {
+  padding-bottom: 24px; }
+
+.layout-header {
+  background-color: #fff159;
+  box-shadow: 0 1px 0 0 rgba(253, 136, 136, 0.1); }
+
+.layout-nav {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto; }
+  .layout-nav-logo {
+    background-image: url("/static/logo__large_plus@2x.png");
+    background-repeat: no-repeat;
+    background-size: 134px 34px;
+    height: 34px;
+    width: 134px;
+    display: inline-block;
+    left: 10px;
+    position: absolute;
+    top: 11px; }
+  .layout-nav-search {
+    padding: 8px 1px;
+    position: relative;
+    left: 160px;
+    max-width: 622px; }
+    .layout-nav-search-input {
+      font-size: 16px;
+      font-weight: 400;
+      color: #333;
+      background-color: #fff;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+      height: 39px;
+      width: 100%;
+      border-radius: 2px;
+      border: 0 rgba(0, 0, 0, 0.2);
+      margin: 0;
+      padding: 7px 60px 9px 15px;
+      box-sizing: border-box;
+      outline: none; }
+    .layout-nav-search-btn {
+      background-image: none;
+      height: 39px;
+      padding-top: 2px;
+      cursor: pointer;
+      outline: 0;
+      width: 30px;
+      background-color: #fff;
+      top: 8px;
+      right: 1px;
+      position: absolute;
+      padding: 0;
+      background: 0 0;
+      border: none;
+      color: #666;
+      box-sizing: border-box; }
+      .layout-nav-search-btn-icon {
+        fill: #666;
+        width: 16px; }
+
+.search {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  color: #666; }
+  .search .item-list {
+    padding: 24px 0; }
+    .search .item-list-breadcrumb__path ol {
+      margin: 0;
+      padding: 0 0 10px;
+      list-style: none; }
+      .search .item-list-breadcrumb__path ol li {
+        display: inline;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 0 2px;
+        line-height: 1.45; }
+        .search .item-list-breadcrumb__path ol li .chevron {
+          width: 9px;
+          height: 9px;
+          display: none;
+          padding: 0 4px;
+          opacity: 0.5; }
+      .search .item-list-breadcrumb__path ol li:not(:last-child) .chevron {
+        display: inline-block; }
+    .search .item-list-item {
+      background-color: #fff;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      display: flex;
+      position: relative; }
+      .search .item-list-item__picture img {
+        border-radius: 4px;
+        display: inline-block;
+        height: 160px;
+        margin: 24px 24px 24px;
+        min-width: 160px;
+        overflow: hidden;
+        width: 160px;
+        flex: 1; }
+      .search .item-list-item__container {
+        color: #333;
+        padding-top: 20px;
+        flex: 3; }
+        .search .item-list-item__container__title {
+          margin: 0;
+          font-size: 20px;
+          font-weight: 300;
+          text-decoration: none; }
+        .search .item-list-item__container__price {
+          padding-top: 4px;
+          font-size: 24px; }
+          .search .item-list-item__container__price sup {
+            font-size: 18px; }
+        .search .item-list-item__container__fs, .search .item-list-item__container__condition {
+          font-size: 14px;
+          font-weight: 400;
+          padding-top: 4px; }
+        .search .item-list-item__container__fs {
+          color: #39b54a; }
+    .search .item-list-item:after {
+      content: '';
+      position: absolute;
+      left: 24px;
+      bottom: 0;
+      height: 1px;
+      width: 94.5%;
+      border-bottom: 1px solid #eee; }
+    .search .item-list-item:last-child {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px; }
+    .search .item-list-item:last-child:after {
+      content: none; }
+

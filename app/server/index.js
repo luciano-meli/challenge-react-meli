@@ -1,5 +1,6 @@
 require('@babel/register');
 require('@babel/polyfill');
+require.extensions['.scss'] = () => {};
 const axios = require('axios')
 const path = require('path')
 const { getItem, getItemListening} = require('./services/item-services');
@@ -13,9 +14,12 @@ const Search = require('../shared/components/pages/search');
 const Vip = require('../shared/components/pages/vip');
 const { default: Axios } = require('axios');
 const { response } = require('express');
+const favicon = require('serve-favicon');
 
 
 server.use('/', express.static(path.join(__dirname, '../../build')));
+server.use('/static', express.static(path.join(__dirname, '../static')));
+server.use(favicon(path.join(__dirname, '../static', 'favicon.ico')));
 
 server.get('/', function (req, res) {
   res.send(template('home', ReactDOMServer.renderToString(React.createElement(Home, {}, null))));
@@ -36,7 +40,16 @@ server.get('/api/items/:id',(req, res) => {
   });
 
 server.get('/items', function (req, res) {
-  res.send(template('search', ReactDOMServer.renderToString(React.createElement(Search, {}, null))));
+  const query = req.query.search;
+  const props = {}
+  axios
+  .get('http://localhost:3000/api/items/',{params: {q:query}})
+  .then(response =>{
+    props.items = response.data.items;
+    props.breadcrumb = response.data.breadcrumb;
+    res.send(template('search', ReactDOMServer.renderToString(React.createElement(Search, {...props}, null))))
+  })
+  .catch(e => console.error(e))
 });
 
 server.get('/items/:id', function (req, res) {

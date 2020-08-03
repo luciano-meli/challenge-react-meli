@@ -1,6 +1,7 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const Home = require('../shared/components/pages/home')
+const React = require('react');
+const ReactDOM = require('react-dom');
+const Home = require('../shared/components/pages/home');
 
-ReactDOM.hydrate(<Home />, document.getElementById('root')); // renderizar nuestro componenente en nuestra vista
-
+ReactDOM
+  .hydrate(<Home />,
+    document.getElementById('root')); // renderizar nuestro componenente en nuestra vista
