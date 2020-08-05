@@ -1,6 +1,6 @@
-const React = require("react");
-const SvgSearch = require("./svg-search");
-require("./layout.scss");
+const React = require('react');
+const SvgSearch = require('./svg-search');
+require('./layout.scss');
 
 class Layout extends React.Component {
   constructor() {

@@ -1,7 +1,7 @@
 const axios = require('axios');
 
-const getDecimalsFromPrice = (amount) =>
-(amount % 1 !== 0 ? parseInt(amount.toString().split('.')[1]) : 0);
+const getDecimalsFromPrice = amount =>
+  amount % 1 !== 0 ? parseInt(amount.toString().split('.')[1]) : 0;
 
 const getItemListening = async (query) => {
   try {
